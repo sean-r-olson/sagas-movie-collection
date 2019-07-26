@@ -14,7 +14,7 @@ app.use(bodyParser.json()); // needed for angular requests
 app.use(express.static('build'));
 
 /** ---------- ROUTES ---------- **/
-app.use('/', moviesRouter);
+app.use('/movies', moviesRouter);
 app.use('/details', detailsRouter);
 app.use('/edit', editRouter);
 
