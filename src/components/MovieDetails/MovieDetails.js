@@ -6,9 +6,12 @@ import '../App/App.css';
 class MovieDetails extends Component {
 
   render() {
+    console.log(this.props.reduxStore.movieDescription)
     return (
       <div>
-         <h1 className="App-header">Movie Details</h1>
+        <h3>{this.props.reduxStore.movieDescription.title}</h3>
+        <p>{this.props.reduxStore.movieDescription.description}</p>
+        <p>{this.props.reduxStore.movieDescription.name}</p>
       </div>
     )
   }

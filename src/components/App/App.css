@@ -40,3 +40,7 @@
   position: static;
   margin: 20px;
 }
+
+.hidden {
+  visibility: hidden;
+}
