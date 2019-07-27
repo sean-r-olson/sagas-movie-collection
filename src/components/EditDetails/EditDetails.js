@@ -8,7 +8,7 @@ class EditDetails extends Component {
   render() {
     return (
       <div>
-         <h1>Edit Details</h1>
+         <h1 className="App-header">Edit Details</h1>
       </div>
     )
   }

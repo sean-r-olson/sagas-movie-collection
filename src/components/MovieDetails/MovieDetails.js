@@ -8,7 +8,7 @@ class MovieDetails extends Component {
   render() {
     return (
       <div>
-         <h1>Movie Details</h1>
+         <h1 className="App-header">Movie Details</h1>
       </div>
     )
   }
