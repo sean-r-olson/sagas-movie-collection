@@ -17,18 +17,19 @@ class MovieList extends Component {
   render() {
     return (
       <div>
-        <h1 className="App-header">Movies</h1>
-        <div>
+        <h1 className="App-header">Movie List</h1>
+        <table>
+        <tbody>
         {this.props.reduxStore.movies.map(item => {
           return (
-                 <div onClick={(event) => this.routeToDetails(item)} className="movies" key={item.id}> 
-                 <img src={item.poster} alt="movies"/>
-                 <h3>{item.title}</h3>
-                 <h4> Description: </h4>
-                 <p className="description">{item.description}</p>
-                 </div>
+                <tr onClick={(event) => this.routeToDetails(item)} className="movies" key={item.id}>
+                  <td><img className="moviePoster" src={item.poster} alt="movies"/></td>
+                  <br/>
+                  <td><p className="description">{item.description}</p></td>
+                </tr>
           )})}
-        </div>
+          </tbody>
+        </table>
       </div>
     )
   }

@@ -26,6 +26,8 @@ class EditDetails extends Component {
     event.preventDefault();
     console.log(this.state.movieDetails)
     this.props.dispatch({type: 'EDIT_DETAILS', payload: this.state.movieDetails})
+    alert('Success Editing Movie Details!');
+    this.props.history.push('/');
   }
 
   cancelEdit = () => {
@@ -38,8 +40,9 @@ class EditDetails extends Component {
 
   render() {
     return (
-      <div>
-        <h1 className="App-header">Edit Details</h1>
+      <>
+      <h1 className="App-header">Edit Details {this.props.reduxStore.movieDescription.title}</h1>
+        <div className="movieDetails">
           <form onSubmit={this.saveDetails}>
             <button onClick={this.homePage}>Back to Movie List</button>
             <button onClick={this.cancelEdit}>Cancel</button>
@@ -59,6 +62,7 @@ class EditDetails extends Component {
             />
         </form>
       </div>
+      </>
     )
   }
 }
