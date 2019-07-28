@@ -9,7 +9,7 @@ class MovieList extends Component {
     }
 
     routeToDetails = (item) => {
-      console.log('in route To DETAILS', item.id)
+      console.log('in route To DETAILS', item)
        this.props.dispatch({ type: 'FETCH_DETAILS', payload: item})
         this.props.history.push('/details'); 
     }
@@ -18,19 +18,15 @@ class MovieList extends Component {
     return (
       <div>
         <h1 className="App-header">Movies</h1>
-        <div >
+        <div>
         {this.props.reduxStore.movies.map(item => {
           return (
                  <div onClick={(event) => this.routeToDetails(item)} className="movies" key={item.id}> 
                  <img src={item.poster} alt="movies"/>
-                 <p> {item.id} </p>
-                 <br/>
                  <h3>{item.title}</h3>
                  <h4> Description: </h4>
                  <p className="description">{item.description}</p>
                  </div>
-                
-                // <MovieItem item={item}/> 
           )})}
         </div>
       </div>

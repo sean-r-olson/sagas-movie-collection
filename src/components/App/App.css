@@ -30,17 +30,14 @@
 }
 
 .movies {
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
-  height: 100%;
-  width: 40%;
+  min-height: 700px;
+  max-height: 700px;
+  min-width: 600px;
+  max-width: 600px;
   border: solid black 10px;
   background-color: rgb(236, 229, 214);
   display: inline-block;
-  position: static;
-  margin: 20px;
-}
-
-.hidden {
-  visibility: hidden;
+  /* margin: 20px; */
 }

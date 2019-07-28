@@ -18,6 +18,17 @@ import createSagaMiddleware from 'redux-saga';
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchMovies);
     yield takeEvery('FETCH_DETAILS', fetchDetails);
+    yield takeEvery('EDIT_DETAILS', editDetails);
+}
+
+function* editDetails(action) {
+    try {
+        yield Axios.put(`movies/update/${action.payload.movie_id}`, action.payload);
+        yield put ({type: 'FETCH_MOVIES'});
+    } catch (error) {
+        console.log('error updating movie details', error);
+        alert('Could not update movie details at this time');
+    }
 }
 
 function* fetchDetails(action) {

@@ -18,7 +18,7 @@ class MovieDetails extends Component {
     return (
       <div>
         <h1 className="App-header">Movie Details</h1>
-        <button onClick={this.homePage}>Back to Movies</button>
+        <button onClick={this.homePage}>Back to Movie List</button>
         <button onClick={this.editDetails}>Edit Details</button>
         <h3>{this.props.reduxStore.movieDescription.title}</h3>
         <p>{this.props.reduxStore.movieDescription.description}</p>

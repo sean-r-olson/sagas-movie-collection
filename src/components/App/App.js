@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import MovieList from '../MovieList/MovieList';
 import MovieDetails from '../MovieDetails/MovieDetails';
 import EditDetails from '../EditDetails/EditDetails';
-import MovieItem from '../MovieItem/MovieItem';
+// import MovieItem from '../MovieItem/MovieItem';
 
 class App extends Component {
   // Renders the entire app on the DOM
@@ -17,7 +17,7 @@ class App extends Component {
             <Route exact path = '/' component = {MovieList} />
             <Route path = '/details' component = {MovieDetails} />
             <Route path = '/edit' component = {EditDetails} />
-            <Route path = '/movieItem' component = {MovieItem} />
+            {/* <Route path = '/movieItem' component = {MovieItem} /> */}
         </Router>
       </div>
     );
