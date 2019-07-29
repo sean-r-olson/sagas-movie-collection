@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import MovieList from '../MovieList/MovieList';
 import MovieDetails from '../MovieDetails/MovieDetails';
 import EditDetails from '../EditDetails/EditDetails';
-// import MovieItem from '../MovieItem/MovieItem';
 
 class App extends Component {
   // Renders the entire app on the DOM

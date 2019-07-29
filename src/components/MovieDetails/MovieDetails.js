@@ -5,10 +5,12 @@ import '../App/App.css';
 
 class MovieDetails extends Component {
 
+  // on click of back to movie list, send user back to home page ('/')
   homePage = () => {
     this.props.history.push('/');
   }
 
+  // on click of edit details, send user to edit page ('/edit') 
   editDetails = () => {
     this.props.history.push('/edit');
   }
@@ -33,8 +35,10 @@ class MovieDetails extends Component {
   }
 }
 
+// declare mapStateToProps to access reducers
 const mapStateToProps = (reduxStore) => ({
     reduxStore
 })
 
+// connect to reducers with mapStateToProps, export comp to be used in other comps
 export default connect(mapStateToProps) (MovieDetails);

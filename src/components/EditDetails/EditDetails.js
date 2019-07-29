@@ -4,6 +4,7 @@ import '../App/App.css';
 
 class EditDetails extends Component {
 
+  // declare state to send as dispatch 
   state = {
       movieDetails: {
       movie_id: this.props.reduxStore.movieDescription.movie_id,
@@ -12,6 +13,10 @@ class EditDetails extends Component {
     }
   }
 
+  // capture input values in:
+  //    -- input field (edit title)
+  //    -- textarea (edit description)
+  // set state to capture values 
   handleChange = (propertyName, event) => {
     this.setState({
       movieDetails: {
@@ -22,6 +27,10 @@ class EditDetails extends Component {
     })
   }
 
+  // on click of save button:
+  //    -- send state with new values as dispatch
+  //    -- alert user details have been edited successfully
+  //    -- send user back to home page ('/')
   saveDetails = (event) => {
     event.preventDefault();
     console.log(this.state.movieDetails)
@@ -30,10 +39,12 @@ class EditDetails extends Component {
     this.props.history.push('/');
   }
 
+  // on click of cancel, send user back to details page ('/details')
   cancelEdit = () => {
     this.props.history.push('/details');
   }
 
+  // on click of back to movie list, send user back to home page ('/')
   homePage = () => {
     this.props.history.push('/');
   }
@@ -67,8 +78,10 @@ class EditDetails extends Component {
   }
 }
 
+// declare mapStateToProps to access reducers
 const mapStateToProps = (reduxStore) => ({
     reduxStore
 })
 
+// connect to reducers with mapStateToProps, export comp to be used in other comps
 export default connect(mapStateToProps) (EditDetails);

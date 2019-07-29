@@ -3,7 +3,6 @@ const router = express.Router();
 const pool = require('../modules/pool');
 
 // GET to db (get movies data, from movies table 
-
 router.get('/', (req, res) => {
     const sqlText=`SELECT * FROM "movies" ORDER BY "id"`;
     pool.query(sqlText)
@@ -16,6 +15,7 @@ router.get('/', (req, res) => {
       })
 })
 
+  // GET to db, select only id of selected movie 
   router.get('/:id', (req, res) => {
     let movieId = req.params.id;
     const sqlText =`select movie_id, genres.name, movies.title, movies.description, movies.poster from movies_genres
@@ -35,6 +35,7 @@ router.get('/', (req, res) => {
       })
   })
 
+  // PUT to db, update only selected movie title, description
   router.put('/update/:id', (req, res) => {
     console.log(req.body);
     const sqlText =`update movies set description = $1, title=$2 where id = $3;`;

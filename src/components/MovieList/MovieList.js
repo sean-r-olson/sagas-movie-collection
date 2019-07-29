@@ -3,11 +3,15 @@ import {connect} from 'react-redux';
 import '../App/App.css';
 
 class MovieList extends Component {
-
+    
+    // run a dispatch to index.js to fetch movies from db (to render to DOM)
     componentDidMount() {
         this.props.dispatch({ type: 'FETCH_MOVIES' })
     }
 
+    // on click of div
+    //    -- send dispatch with clicked item as payload
+    //    -- route to /details 
     routeToDetails = (item) => {
       console.log('in route To DETAILS', item)
        this.props.dispatch({ type: 'FETCH_DETAILS', payload: item})
@@ -35,8 +39,10 @@ class MovieList extends Component {
   }
 }
 
+// declare mapStateToProps to access reducers
 const mapStateToProps = (reduxStore) => ({
     reduxStore
 })
 
+// connect to reducers with mapStateToProps, export comp to be used in other comps
 export default connect(mapStateToProps) (MovieList);
