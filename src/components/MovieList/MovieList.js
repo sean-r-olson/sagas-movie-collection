@@ -16,7 +16,7 @@ class MovieList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="movieList">
         <h1 className="App-header">Movie List</h1>
         <table>
         <tbody>
