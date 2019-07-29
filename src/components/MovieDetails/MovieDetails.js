@@ -22,8 +22,11 @@ class MovieDetails extends Component {
         <button onClick={this.homePage}>Back to Movie List</button>
         <button onClick={this.editDetails}>Edit Details</button>
         <h3>{this.props.reduxStore.movieDescription.title}</h3>
+        <hr/>
         <p>{this.props.reduxStore.movieDescription.description}</p>
-        <p>{this.props.reduxStore.movieDescription.name}</p>
+        <hr/>
+        <h5>Genre: {this.props.reduxStore.movieDescription.name}</h5>
+        
       </div>
       </>
     )

@@ -3,6 +3,12 @@
   background-color: black;
 }
 
+body {
+  background-image: url('popcorn.jpg');
+  background-size: 100%;
+  background-attachment: fixed;
+
+}
 .App-header {
   background-color: #222;
   margin: 0px 0px 10px 0px;
@@ -14,6 +20,7 @@
   position: sticky;
   top: 0;
   text-align: center;
+  font-family: 'Fascinate', cursive;
 }
 
 .App-title {
@@ -36,11 +43,16 @@
   text-align: center;
   min-height: 700px;
   max-height: 700px;
-  border: solid black 10px;
+  border: solid  #222 10px;
   background-color: rgb(236, 229, 214);
   display: inline-block;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
+}
+
+.movies:hover {
+  border: solid #222 10px;
+  border-style: double;
 }
 
 .moviePoster {
@@ -59,11 +71,11 @@
   padding: 10px;
   margin: 1% 25%;
   text-align: center;
-  min-height: 700px;
-  max-height: 700px;
+  min-height: 400px;
+  max-height: 400px;
   min-width: 500px;
   max-width: 500px;
-  border: solid black 10px;
+  border: solid #222 10px;
   background-color: rgb(236, 229, 214);
   display: inline-block;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -95,6 +107,8 @@ textArea {
   margin: 5px;
 }
 
-.movieList {
-  background-image: url(/Users/seanolson/Downloads/movie-sagas-master/public/images/popcorn.jpg)
+hr {
+  height: 2px;
+  background-color: black;
 }
+

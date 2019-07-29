@@ -41,7 +41,7 @@ class EditDetails extends Component {
   render() {
     return (
       <>
-      <h1 className="App-header">Edit Details {this.props.reduxStore.movieDescription.title}</h1>
+      <h1 className="App-header">Edit Details: {this.props.reduxStore.movieDescription.title}</h1>
         <div className="movieDetails">
           <form onSubmit={this.saveDetails}>
             <button onClick={this.homePage}>Back to Movie List</button>

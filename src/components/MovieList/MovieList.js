@@ -24,7 +24,7 @@ class MovieList extends Component {
           return (
                 <tr onClick={(event) => this.routeToDetails(item)} className="movies" key={item.id}>
                   <td><img className="moviePoster" src={item.poster} alt="movies"/></td>
-                  <br/>
+                  <hr/>
                   <td><p className="description">{item.description}</p></td>
                 </tr>
           )})}
