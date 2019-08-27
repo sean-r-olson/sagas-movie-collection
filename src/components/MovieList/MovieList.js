@@ -1,6 +1,24 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import '../App/App.css';
+import Grid from '@material-ui/core/Grid';
+import {withStyles} from '@material-ui/core/styles';
+
+const styles = theme => ({
+  movies: {
+    // padding: '10px',
+    // // margin: '5px',
+    // border: 'solid #222 2px',
+    // backgroundColor: 'rgb(236, 229, 214)',
+    // display: 'inline-block',
+    // boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
+  },
+  image: {
+    // padding: '10px',
+    // height: '330px',
+    // width: '220px',
+  }
+})
 
 class MovieList extends Component {
     
@@ -19,22 +37,25 @@ class MovieList extends Component {
     }
 
   render() {
+    const {classes} = this.props;
     return (
-      <div className="movieList">
+      <>
         <h1 className="App-header">Movie List</h1>
-        <table>
-        <tbody>
-        {this.props.reduxStore.movies.map(item => {
+        <Grid container spacing={16}>
+          <Grid item xs={12}>
+            
+           {this.props.reduxStore.movies.map(item => {
           return (
-                <tr onClick={(event) => this.routeToDetails(item)} className="movies" key={item.id}>
-                  <td><img className="moviePoster" src={item.poster} alt="movies"/></td>
-                  <hr/>
-                  <td><p className="description">{item.description}</p></td>
-                </tr>
+                <Grid item xs={4} className="movies"
+                    // className="container-fluid" 
+                    onClick={(event) => this.routeToDetails(item)} key={item.id}>
+                        <img src={item.poster} alt="movies" className="hvr-grow"/>
+                        {/* <p >{item.description}</p> */}
+                </Grid>
           )})}
-          </tbody>
-        </table>
-      </div>
+          </Grid>
+          </Grid>
+        </>
     )
   }
 }
@@ -45,4 +66,4 @@ const mapStateToProps = (reduxStore) => ({
 })
 
 // connect to reducers with mapStateToProps, export comp to be used in other comps
-export default connect(mapStateToProps) (MovieList);
+export default withStyles(styles)(connect(mapStateToProps)(MovieList));

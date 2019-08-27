@@ -23,7 +23,7 @@ class EditDetails extends Component {
         ...this.state.movieDetails,
         movie_id: this.props.reduxStore.movieDescription.movie_id,
         [propertyName]: event.target.value
-      }
+      } 
     })
   }
 

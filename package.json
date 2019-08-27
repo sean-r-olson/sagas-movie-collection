@@ -6,8 +6,10 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "axios": "^0.18.0",
+    "hover.css": "^2.3.2",
     "pg": "^7.11.0",
     "react": "^16.8.6",
+    "react-clickable": "^1.1.0",
     "react-dom": "^16.8.6",
     "react-redux": "^5.1.1",
     "react-router-dom": "^5.0.1",
