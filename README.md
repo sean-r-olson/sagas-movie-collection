@@ -4,13 +4,15 @@ Welcome to the movie collection! Here you can scroll through my collection, each
 ## Built With
 JavaScript, React, Redux, Sagas, Node, PostgreSQL
 
-## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ## Prerequisites 
 React.js, Node.js, Redux, Sagas, PostgreSQL
 
 ## Steps to get the development environment running.
+Interact with the app here: 
+https://warm-headland-93844.herokuapp.com/#/
+
+OR 
+
 - Download this project
 - npm install
 - In 2 terminal windows:
